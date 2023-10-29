@@ -7,8 +7,12 @@ import { IoCloseSharp } from "react-icons/io5";
 import { FiMenu } from "react-icons/fi";
 import Container from "./Common/Container";
 import { PagesLinkData } from "@/Data/Link";
+import { usePathname } from 'next/navigation'
+
 const Header = () => {
   const [isHeader, setisHeader] = useState(true);
+    const pathname = usePathname();
+
 
   return (
     <div className="sticky z-50 top-0 ">
@@ -19,15 +23,19 @@ const Header = () => {
               <Link href="/">
                 <img src="/assets/Sat Associates 505.png" className="h-20 " />
               </Link>
-              <div className="hidden md:flex bg-[#153563]">
+              <div className="hidden md:flex gap-2 bg-[#153563]">
                 {PagesLinkData?.map((val, index) => {
                   return (
                     <div key={index + val} className="relative">
                       <Link
                         href={val.path}
-                        className={` text-white py-2 hover:font-medium rounded-sm px-4 hover:text-blue-900 hover:bg-white ${
-                          val.path == "/" && "dropdown"
-                        }`}
+                        className={` text-white py-2 hover:font-medium rounded-sm px-4 hover:text-blue-900 hover:bg-white
+                       ${val.path == "/" && "dropdown"}    ${
+                          pathname == val.path && pathname !== "/"
+                            ? "bg-white text-blue-900 font-medium"
+                            : ""
+                        }
+                      `}
                       >
                         {val.lable}
                       </Link>
@@ -41,7 +49,7 @@ const Header = () => {
                                 <Link
                                   key={index}
                                   href={data.path}
-                                  className="transition-all font-medium delay-100 block w-full py-2 px-4 border-b-2 border-gray hover:bg-[#153563] hover:text-white"
+                                  className="transition-all font-medium delay-100 block w-full py-2 px-4 border-b-2 border-gray hover:bg-[#153563] hover:text-white "
                                 >
                                   {data.lable}
                                 </Link>
@@ -77,18 +85,23 @@ const Header = () => {
             >
               {PagesLinkData?.map((val, index) => {
                 return (
-                  <div key={index + val}  className="relative">
+                  <div key={index + val} className="relative">
                     <Link
                       href={val.path}
-                      className={` text-white py-1 rounded-sm px-4 hover:text-blue-900 hover:bg-white ${
+                      className={`block w-full text-white py-1 rounded-sm px-4 hover:text-blue-900 hover:bg-white  ${
                         val.path == "/" && "dropdown"
-                      }`}
+                      }    ${
+                        pathname == val.path && pathname !== "/"
+                          ? "bg-white text-blue-900 font-medium"
+                          : ""
+                      }
+                      `}
                     >
                       {val.lable}
                     </Link>
                     {val.path == "/" && (
                       <div
-                        className={`  hidden  z-50 list absolute top-5 left-0 py-2 w-44 `}
+                        className={` hidden  z-50 list absolute top-8 left-0 py-2 w-44 `}
                       >
                         <ul className="bg-white p-1 border border-[#153563]">
                           {val?.importantLinks.map((data, index) => {
