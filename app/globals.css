@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.inputbox{
+    all: unset;
+    width: 100%;
+    color: black;
+padding: 5PX 10PX;
+}
+
+.imgset{
+    background-image: url("../public/assets/HeroBg.jpg");
+background-attachment: fixed;
+position: relative;
+z-index: 1;
+background-size: cover;
+background-repeat: no-repeat;
+background-blend-mode: darken;
+background-position: right;
+}
+
+.imgset::before{
+content: "";
+position: absolute;
+z-index: -1;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.2);
+}
+
+/* .effect{
+    position: relative;
+   
+}
+
+
+.effect::after {
+    content: "";
+    height: 100%;
+    width: 0%;
+    position: absolute;
+    top: 0;
+    left: 0;
+        z-index: 1;
+    transition: all 1s;
+    }
+
+.card:hover  .effect::after{
+    width: 100%;
+} */
+
+
+p{
+    font-size: 18px;
+}
+.dropdown:hover ~ .list{
+    display: inline;
+}
+
+.dropdown:hover ~ .list{
+    display: inline;
+}
+
+.list:hover{
+    display: inline;
+}
+
+.list:hover ~ .dropdown {
+background-color: white !important;
+}
+  .swiper-button-next,
+  .swiper-button-prev {
+      padding: 0px 50px !important;
+      color: #a8a8a8 !important;
+      width: 1px !important;
+  }
+
+  @media (max-width: 768px) {
+
+      .swiper-button-next,
+      .swiper-button-prev {
+          display: none !important;
+          /* Hide the navigation buttons on mobile */
+      }
+  }
+
+  .swiper-pagination-bullet-active {
+      background-color: #153563 !important;
+  }
