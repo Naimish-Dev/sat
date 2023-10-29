@@ -29,7 +29,7 @@ const Header = () => {
                     <div key={index + val} className="relative">
                       <Link
                         href={val.path}
-                        className={` text-white py-2 font-medium rounded-sm px-4 hover:text-blue-900 hover:bg-white
+                        className={` text-white py-2 font-medium rounded-sm px-4  hover:border-2 hoverborder-white
                        ${val.path == "/" && "dropdown"}    ${pathname == val.path && pathname !== "/" ? "bg-white text-blue-900 " : ""}
                       `}
                       >
