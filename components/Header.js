@@ -21,7 +21,7 @@ const Header = () => {
           <div className="relative">
             <div className=" flex items-center justify-between  px-2   ">
               <Link href="/">
-                <img src="/assets/Sat Associates 505.png" className="h-20 " />
+                <img src="/assets/9174514_6340.jpg" className="h-20 " />
               </Link>
               <div className="hidden md:flex gap-2 bg-[#153563]">
                 {PagesLinkData?.map((val, index) => {
@@ -29,8 +29,8 @@ const Header = () => {
                     <div key={index + val} className="relative">
                       <Link
                         href={val.path}
-                        className={`  py-2 rounded-sm px-4 hover:text-blue-900 hover:bg-white
-                       ${val.path == "/" && "dropdown"}    ${pathname == val.path && pathname !== "/" ? "bg-white text-blue-900 font-medium" : "text-white"}
+                        className={`  py-2 rounded-sm px-4 hover:text-[#153563] hover:bg-white
+                       ${val.path == "/" && "dropdown"}    ${pathname == val.path && pathname !== "/" ? "bg-white text-[#153563] font-medium" : "text-white"}
                       `}
                       >
                         {val.lable}
@@ -84,11 +84,11 @@ const Header = () => {
                   <div key={index + val} className="relative">
                     <Link
                       href={val.path}
-                      className={`block w-full  py-1 rounded-sm px-4 hover:text-blue-900 hover:bg-white  ${
+                      className={`block w-full  py-1 rounded-sm px-4 hover:text-[#153563] hover:bg-white  ${
                         val.path == "/" && "dropdown"
                       }    ${
                         pathname == val.path && pathname !== "/"
-                          ? "bg-white text-blue-900 font-medium"
+                          ? "bg-white text-[#153563] font-medium"
                           : "text-white"
                       }
                       `}

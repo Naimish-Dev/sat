@@ -14,8 +14,7 @@ const page = () => {
             />
 
             <p className=" text-3xl sm:text-4xl md:text-5xl my-2 break-all">
-              
-               Our resourcess for your business
+              Our resourcess for your business
             </p>
 
             <p className=" text-lg md:text-xl mt-4 mb-2">
@@ -37,7 +36,7 @@ const page = () => {
         <div className="flex flex-wrap  gap-4 md:gap-2 justify-between items-center my-12">
           <div className=" border-1  shadow-lg basis-full sm:basis-[48%] md:basis-[32%] lg:basis-[24%] border-gray px-2 py-4 flex flex-col gap-2 items-center justify-between">
             <div className="img">
-              <img src="/assets/bg.jpg" className="w-24 h-24" />
+              <img src="/assets/bg.jpg" className="w-[300px] sm:w-full h-32" />
             </div>
             <div className="Contain">
               <h6 className="text-xl font-medium text-center">

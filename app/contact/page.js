@@ -13,9 +13,9 @@ const Contantus = () => {
   return (
     <Container>
       <div className="contact">
-        <div className="">
-          <div className="relative">
-            <div className="absolute top-[10%] sm:left-[10%] lg:left-[25%] w-full sm:w-[80%] lg:w-[50%]  ">
+        <div className="relative">
+          <div className="bg-[#dedede3b] py-16 ">
+            <div className=" w-[full] sm:w-[80%] md:w-[70%] lg:[w-50%] mx-auto mb-10 ">
               <h1 className="flex items-center justify-center gap-2  text-center  text-3xl font-medium text-[#153563] mb-2">
                 <HiOutlineLocationMarker></HiOutlineLocationMarker>
                 Let's have a talk
@@ -26,44 +26,8 @@ const Contantus = () => {
                 Your satisfaction is our priority. Thank you for reaching out!
               </p>
             </div>
-            <img
-              src="/assets/9174514_6340.jpg"
-              className="h-[550px] md:h-[500px] w-full object-cover"
-            />
-          </div>
-          <div className="bg-[#dedede3b] py-16 flex flex-col sm:flex-row justify-center gap-10 mb-10">
-            <div className="w-full  sm:w-[50%] md:w-[40%] ">
-              <form
-                className="  flex gap-2 lg:gap-4  flex-col "
-                onSubmit={Formhendler}
-              >
-                <div className="flex gap-2 lg:gap-4  flex-col lg:flex-row">
-                  <input
-                    type="name"
-                    className="border border-black p-2 w-full  "
-                    placeholder="Enter Name"
-                  />
-                  <input
-                    type="email"
-                    className="border border-black p-2  w-full"
-                    placeholder="Enter Email"
-                  />
-                </div>
-                <textarea
-                  rows={5}
-                  className="border border-black  p-2"
-                  placeholder="Enter You Message"
-                ></textarea>
-                <button
-                  type="submit"
-                  className="border py-2 rounded-sm ml-auto w-28 hover:bg-[#153563] hover:text-white border-[#153563] font-bold text-[#153563] p-1"
-                >
-                  Send
-                </button>
-              </form>
-            </div>
-            <div className=" flex gap-5  flex-col ">
-              <div className="">
+            <div className=" flex flex-wrap flex-col sm:flex-row justify-center gap-10 mb-10 ">
+              <div className="min-w-[320px] mx-auto  bg-white">
                 <h1 className="flex gap-2  items-center text-2xl font-medium text-[#153563]">
                   <HiOutlineLocationMarker></HiOutlineLocationMarker>
                   Location
@@ -75,7 +39,7 @@ const Contantus = () => {
                 </div>
               </div>
 
-              <div className="">
+              <div className="min-w-[320px]  mx-auto  bg-white">
                 <h1 className="flex gap-2  items-center text-2xl font-medium text-[#153563]">
                   <BiTimeFive></BiTimeFive>
                   Timming
@@ -85,11 +49,21 @@ const Contantus = () => {
                   <div> SATURDAY : 9 AM to 5 PM </div>
                 </div>
               </div>
+
+              <div className="min-w-[320px] mx-auto   bg-white">
+                <h1 className="flex gap-2  items-center  text-2xl font-medium text-[#153563]">
+                  <BiTimeFive></BiTimeFive>
+                  Contact
+                </h1>
+                <div className="ml-8">
+                  <div> +91 7878050553 </div>
+                  <div> info@Satgroup.co.in</div>
+                </div>
+              </div>
             </div>
           </div>
-        </div>
         <div className="my-10">
-          <div className="w-[100%] md:w-[80%] md:mx-auto">
+          <div className="">
             <h1 className="underline underline-offset-8 flex gap-2 text-3xl font-medium justify-center  text-[#153563] my-8">
               <HiOutlineLocationMarker></HiOutlineLocationMarker>
               Find Our Location
@@ -104,6 +78,7 @@ const Contantus = () => {
             ></iframe>
           </div>
         </div>
+      </div>
       </div>
     </Container>
   );

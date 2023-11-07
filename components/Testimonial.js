@@ -8,9 +8,9 @@ import "swiper/css/pagination";
 import { FreeMode, Pagination } from "swiper/modules";
 
 const Testimonial = () => {
-  const Slides = 9;
+  const Slides = 6;
   return (
-    <div className="py-16 bg-[#dedede3b] px-2">
+    <div className=" py-16 bg-[#dedede3b] px-2">
       <h2 className="text-3xl font-bold text-center text-[#153563]">
         " What our customers say "
       </h2>
